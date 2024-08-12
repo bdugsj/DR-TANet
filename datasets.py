@@ -22,8 +22,8 @@ class pcd(Dataset):
     def __getitem__(self, index):
         
         fn = self.filename[index]
-        fn_t0 = pjoin(self.img_t0_root,fn+'.jpg')
-        fn_t1 = pjoin(self.img_t1_root,fn+'.jpg')
+        fn_t0 = pjoin(self.img_t0_root,fn+'.png')
+        fn_t1 = pjoin(self.img_t1_root,fn+'.png')
         fn_mask = pjoin(self.img_mask_root,fn+'.png')
 
         if os.path.isfile(fn_t0) == False:
